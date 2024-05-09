@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Nicole's Adoption Center</title>
+    <link rel="stylesheet" href="styles.css"> 
+</head>
+<body>
+
+    <header>
+        <span ><p id="currentDateTime"></p></span>
+    <table>
+        <tr>
+            <th> Nicole's Adoption Center</th>
+            <td> <a href="/home"> <img src="https://png.pngtree.com/png-vector/20231101/ourmid/pngtree-dog-and-cat-white-backgroud-png-image_10429901.png"  alt="Dogs and cats sitting beside each other" style="width:541px;height:300px;"></a></td>
+        
+        </tr>
+    </table>
+    </header>
+
+    <% include('../views/partials/header.ejs') %>
+
+    
+    <div id="contentArea">   
+        <aside>
+            <ul>
+                <li><a href="/home" >Home Page</a></li>
+                <li><a href="/findPet">Find a Dog/Cat</a></li>
+                <li><a href="/dogCare" >Dog Care</a></li>
+                <li><a href="/catCare" >Cat Care</a></li>
+                <li><a href="/login">Have a Pet to Give Away</a></li>
+                <li><a href="/account">Create an Account</a></li>
+                <li><a href="/contact">Contact Us</a></li>
+                <li>
+                    <form id="logoutForm" action="/logOut" method="POST">
+                        <br>
+                        <button type="button" onclick="confirmLogout()">Log Out</button>
+                    </form>
+                </li>               </ul>
+        </aside>
+        
+        <article>
+            <div id="browse">
+                <% if (pets.length === 0) { %>
+                    <h2>No matches found</h2>
+                <% } else { %>
+                    <h2>Browse Available Pet Matches</h2>
+                    <% pets.forEach(pet => { %>
+                        <div class="pet">
+                            <div class="pet-details">
+                                <h3><%= pet.type %></h3>
+                                <p>Breed: <%= pet.breed %></p>
+                                <p>Age: <%= pet.age %></p>
+                                <p>Gender: <%= pet.gender %></p>
+                                <p>Gets along with: <%= pet.getsAlongWith %></p>
+                                <p>Reason for adoption: <%= pet.reasonForAdoption %></p>
+                                <p>Owner: <%= pet.owner %></p>
+                                <button class="button">Interested</button>
+                            </div>
+                        </div>
+                    <% }); %>
+                <% } %>
+            </div>
+        </article>
+    </div>
+    
+    <% include('../views/partials/footer.ejs') %>
+
+    <footer>
+        <p>Copyright © 2024 Nicole's Adoption Center. All rights reserved.</p>
+        <p><a href="/privacyDisclaimer">Privacy/Disclaimer Statement</a></p>
+    </footer>
+    
+    
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Nicole's Adoption Center</title>
+        <link rel="stylesheet" href="styles.css"> 
+    </head>
+
+<body>
+
+    
+    <%- include('../views/partials/header.ejs') %>
+    
+    
+     <div id="contentArea">   
+    
+    <aside>
+            <ul>
+                <li><a href="/home" >Home Page</a></li>
+                <li><a href="/findPet">Find a Dog/Cat</a></li>
+                <li><a href="/dogCare" >Dog Care</a></li>
+                <li><a href="/catCare" >Cat Care</a></li>
+                <li><a href="/login">Have a Pet to Give Away</a></li>
+                <li><a href="/account">Create an Account</a></li>
+                <li><a href="/contact">Contact Us</a></li>
+                <li>
+                    <form id="logoutForm" action="/logOut" method="POST">
+                        <br>
+                        <button type="button" onclick="confirmLogout()">Log Out</button>
+                    </form>
+                </li>   
+            </ul>
+    </aside>
+    
+        
+    <article>
+      
+        <div id="catCare">
+            <h1>Cat Care Essentials</h1>
+  
+  <p>Welcome to the world of feline companionship! Bringing a cat into your home is an exciting journey. Whether you've recently adopted a cat or are considering it, here are essential tips for ensuring your furry friend's well-being.</p>
+
+  <h2>Basic Care</h2>
+  
+  <h3>Feeding:</h3>
+  <p>Choose high-quality cat food tailored to your cat's age, activity level, and health, recommended by your veterinarian. Ensure it contains essential nutrients like taurine for heart and eye health. Always provide fresh water, and monitor your cat's diet to avoid overindulgence in treats.</p>
+
+  <h3>Grooming:</h3>
+  <p>Regular brushing reduces shedding and hairballs, keeping your cat's coat clean and healthy. Explore our Cat Grooming Tips for detailed guidance.</p>
+
+  <h3>Handling:</h3>
+  <p>Handle your cat gently, supporting their body properly. Avoid lifting them by the scruff of the neck or front legs.</p>
+
+  <h3>Housing:</h3>
+  <p>Provide a clean, cozy space indoors for your cat to sleep and rest, minimizing risks associated with outdoor living.</p>
+
+  <h3>Identification:</h3>
+  <p>If your cat ventures outside, equip them with a safety collar and ID tag or microchip for easy identification if they get lost.</p>
+
+  <h3>Litter Box:</h3>
+  <p>Set up a quiet, accessible litter box indoors, maintaining cleanliness to encourage regular use. Learn more about managing litter box issues on our website.</p>
+
+  <h3>Scratching:</h3>
+  <p>Satisfy your cat's natural urge to scratch with a sturdy scratching post or pad, preventing damage to furniture and keeping their claws healthy.</p>
+
+  <h2>Healthcare</h2>
+
+  <h3>Regular Vet Visits:</h3>
+  <p>Schedule annual check-ups with your veterinarian to monitor your cat's health and administer necessary vaccinations.</p>
+
+  <h3>Medication:</h3>
+  <p>Administer medication only as prescribed by a veterinarian, and promptly seek professional advice if you suspect poisoning.</p>
+
+  <h3>Spaying and Neutering:</h3>
+  <p>Ensure your cat is spayed or neutered by five months of age to prevent unwanted litters and promote their health.</p>
+
+  <h3>Vaccinations:</h3>
+  <p>Follow your veterinarian's recommendations for vaccinations tailored to your cat's specific needs.</p>
+
+  <h2>Essential Supplies:</h2>
+  <p>Stock up on essential supplies like premium cat food, water and food dishes, interactive toys, grooming tools, a safety collar with ID tag, scratching post, litter box and litter, a cat carrier, and a cozy bed or box.</p>
+
+  <p>By prioritizing these aspects of cat care, you'll foster a happy, healthy bond with your feline companion.</p>
+            
+            <br>
+          <p>Source: <a href="https://www.aspca.org/pet-care/cat-care/general-cat-care" target="_blank">www.aspca.org/pet-care/cat-care/general-cat-care</a></p>
+            <p style="font-size: 12px;">(Content sourced from ASPCA)</p>
+        </div>
+
+    </article>
+        </div>
+  
+    
+        <%- include('../views/partials/footer.ejs') %>
+
+    
+    
+    
+    <script src="script.js"></script>
+   
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Nicole's Adoption Center</title>
+        <link rel="stylesheet" href="styles.css"> 
+    </head>
+
+<body>
+    <%- include('../views/partials/header.ejs') %>
+    
+    
+     <div id="contentArea">   
+    
+    <aside>
+        <ul>
+            <li><a href="/home" >Home Page</a></li>
+            <li><a href="/findPet">Find a Dog/Cat</a></li>
+            <li><a href="/dogCare" >Dog Care</a></li>
+            <li><a href="/catCare" >Cat Care</a></li>
+            <li><a href="/login">Have a Pet to Give Away</a></li>
+            <li><a href="/account">Create an Account</a></li>
+            <li><a href="/contact">Contact Us</a></li>
+            <li>
+                <form id="logoutForm" action="/logOut" method="POST">
+                    <br>
+                    <button type="button" onclick="confirmLogout()">Log Out</button>
+                </form>
+            </li>        </ul>
+    </aside>
+    
+        
+    
+      <article>
+
+        <div id = "createAccount">
+            <form id="registerForm" action="/register" method="POST" onsubmit="return validateAccountForm()" >
+                <label for="username">Username:</label><br>
+                <input type="text" id="username" name="username" pattern="[a-zA-Z0-9]+" title="Username can contain letters (both upper and lower case) and digits only."><br>
+                <small>Allowed formats: Letters (both upper and lower case) and digits only.</small><br><br>
+                <label for="password">Password:</label><br>
+                <input type="password" id="password" name="password" pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{4,}$" title="Password must be at least 4 characters long, have at least one letter, and at least one digit."><br>
+                <small>Allowed formats: At least 4 characters long, containing at least one letter and at least one digit.</small><br><br>
+                <button type="submit">Create an Account</button>
+              </form>
+              
+              <div id="error-message" style="color: red;"></div>
+         </div> 
+
+        </article>
+
+        </div>
+  
+    
+        <%- include('../views/partials/footer.ejs') %>
+
+    
+    
+    
+    <script src="script.js"></script>
+    
+   
+</body>
+</html>

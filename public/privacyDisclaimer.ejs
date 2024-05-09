@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Nicole's Adoption Center</title>
+        <link rel="stylesheet" href="styles.css"> 
+    </head>
+
+<body>
+    <%- include('../views/partials/header.ejs') %>
+    
+    
+     <div id="contentArea">   
+    
+    <aside>
+        <ul>
+            <li><a href="/home" >Home Page</a></li>
+            <li><a href="/findPet">Find a Dog/Cat</a></li>
+            <li><a href="/dogCare" >Dog Care</a></li>
+            <li><a href="/catCare" >Cat Care</a></li>
+            <li><a href="/login">Have a Pet to Give Away</a></li>
+            <li><a href="/account">Create an Account</a></li>
+            <li><a href="/contact">Contact Us</a></li>
+            <li>
+                <form id="logoutForm" action="/logOut" method="POST">
+                    <br>
+                    <button type="button" onclick="confirmLogout()">Log Out</button>
+                </form>
+            </li>           </ul>
+    </aside>
+    
+        
+    <article>
+      
+        <div id="privacy-disclaimer" >
+            <h3>Privacy/Disclaimer Statement</h3>
+                <p>We value your privacy and assure you that any information provided to us will not be sold or misused. While we strive to provide accurate information about pets available for adoption, we cannot guarantee the accuracy of the information provided by pet owners. We encourage you to verify all details before making any decisions.</p>
+        </div>
+
+    </article>
+        </div>
+  
+    
+        <%- include('../views/partials/footer.ejs') %>
+
+    
+    
+    
+    <script src="script.js"></script>
+   
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Nicole's Adoption Center</title>
+        <link rel="stylesheet" href="styles.css"> 
+    </head>
+
+<body>
+    <%- include('../views/partials/header.ejs') %>
+    
+    
+     <div id="contentArea">   
+    
+    <aside>
+        <ul>
+            <li><a href="/home" >Home Page</a></li>
+            <li><a href="/findPet">Find a Dog/Cat</a></li>
+            <li><a href="/dogCare" >Dog Care</a></li>
+            <li><a href="/catCare" >Cat Care</a></li>
+            <li><a href="/login">Have a Pet to Give Away</a></li>
+            <li><a href="/account">Create an Account</a></li>
+            <li><a href="/contact">Contact Us</a></li>
+            <li>
+                <form id="logoutForm" action="/logOut" method="POST">
+                    <br>
+                    <button type="button" onclick="confirmLogout()">Log Out</button>
+                </form>
+            </li>           </ul>
+    </aside>
+    
+        
+    <article>
+      
+        <div id="findPet">
+            <form action="/findPetSubmit" method = "post" onsubmit="return validateFindPetForm(event); ">
+                <fieldset>
+                    <legend>Find a Dog/Cat Form</legend>
+                    <label> Which animal are you looking for? </label>
+                    <input type="radio" id="findDog" name="findDogCat" value="dog">
+                    <label for="findDog">Dog</label>
+                    <input type="radio" id="findCat" name="findDogCat" value="cat">
+                    <label for="findCat">Cat</label><br><br>
+                    <label for="findBreed"> Enter your preferred breed of choice (you may have no preferrence): </label>
+                    <input type="text" id="findBreed" name="findBreed"><br><br>
+                    <label for="findAge"> What is the preffered age for your pet? </label>
+                     <select name="findAge" id="findAge">
+                            <option>--------------------------------------</option>
+                            <option>6 months old or less</option>
+                            <option>Between 6 months and 2 years old</option>
+                            <option>Between 2 and 6 years old</option>
+                            <option>6 years old or older</option>
+                            <option>No age preference</option>
+                    </select><br><br>
+                    <label> What is the preferred gender? </label>
+                    <input type="radio" id="findFemale" name="findGender" value="female">
+                    <label for="findFemale">Female</label>
+                    <input type="radio" id="findMale" name="findGender" value="male">
+                    <label for="findMale">Male</label>
+                    <input type="radio" id="findNoGenderChoice" name="findGender" value = "noPreference">
+                    <label for="findNoGenderChoice">No preferrence</label><br><br>
+                    <label> Select if your pet needs to get along with any of the following: </label>
+                    <input type="checkbox" id="findOtherDogs" name="getAlongWith" value="otherDogs">
+                        <label for="findOtherDogs"> Other Dogs</label>
+                    <input type="checkbox" id="findOtherCats" name="getAlongWith" value="otherCats">
+                        <label for="findOtherCats"> Other Cats</label>
+                    <input type="checkbox" id="findSmallChildren" name="getAlongWith" value="smallChildren">
+                        <label for="findSmallChildren"> Small Children </label><br><br>
+                    <input type="submit" value="Submit">
+                    <input type="reset" value="Clear">
+                </fieldset>
+            </form>
+        </div>
+
+    </article>
+        </div>
+  
+    
+        <%- include('../views/partials/footer.ejs') %>
+
+    
+    
+    
+    <script src="script.js"></script>
+   
+</body>
+</html>

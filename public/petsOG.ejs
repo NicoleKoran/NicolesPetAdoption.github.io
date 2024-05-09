@@ -1,0 +1,116 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Nicole's Adoption Center</title>
+        <link rel="stylesheet" href="styles.css"> 
+    </head>
+
+<body>
+    <%- include('../views/partials/header.ejs') %>
+    
+    
+     <div id="contentArea">   
+    
+    <aside>
+        <ul>
+            <li><a href="/home" >Home Page</a></li>
+            <li><a href="/findPet">Find a Dog/Cat</a></li>
+            <li><a href="/dogCare" >Dog Care</a></li>
+            <li><a href="/catCare" >Cat Care</a></li>
+            <li><a href="/login">Have a Pet to Give Away</a></li>
+            <li><a href="/account">Create an Account</a></li>
+            <li><a href="/contact">Contact Us</a></li>
+            <li>
+                <form id="logoutForm" action="/logOut" method="POST">
+                    <br>
+                    <button type="button" onclick="confirmLogout()">Log Out</button>
+                </form>
+            </li>           </ul>
+    </aside>
+    
+        
+    <article>
+      
+        <div id="browse">
+
+            <h2>Browse Available Pets</h2>
+                <% pets.forEach(pet => { %>
+                    <div class="pet">
+                        <div class="pet-details">
+                            <h3><%= pet.type %></h3>
+                            <p>Breed: <%= pet.breed %></p>
+                            <p>Age: <%= pet.age %></p>
+                            <p>Gender: <%= pet.gender %></p>
+                            <p>Gets along with: <%= pet.getsAlongWith %></p>
+                            <p>Reason for adoption: <%= pet.reasonForAdoption %></p>
+                            <p>Owner: <%= pet.owner %></p>
+                            <button class="button">Interested</button>
+                        </div>
+                    </div>
+                <% }); %>
+            </div>
+
+
+
+
+
+            <h2>PREVIOUSLY DONE - Browse Available Pets</h2>
+            <div class="pet">
+                <img class = "styled-image" src="https://images.unsplash.com/photo-1633722715463-d30f4f325e24?q=80&w=2787&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Dog">
+                <div class="pet-details">
+                    <h3>Dog</h3>
+                    <p>Breed: Golden Retriever</p>
+                    <p>Age: 2 years</p>
+                    <p>Gender: Male</p>
+                    <p>Gets along with: Other Dogs, Small Children</p>
+                    <p>Reason for adoption: Very friendly and playful</p>
+                    <p>Owner: Robert Smith </p>
+                    <button class="button">Interested</button>
+                </div>
+            </div>
+            <div class="pet">
+                <img class = "styled-image" src="https://images.unsplash.com/photo-1568152950566-c1bf43f4ab28?q=80&w=2865&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Cat">
+                <div class="pet-details">
+                    <h3>Cat</h3>
+                    <p>Breed: Siamese</p>
+                    <p>Age: 1 year</p>
+                    <p>Gender: Female</p>
+                    <p>Gets along with: Other Cats</p>
+                    <p>Reason for adoption: Affectionate and good with children</p>
+                    <p>Owner: Jane Murphy </p>
+                    <button class="button">Interested</button>
+                </div>
+            </div>
+            <div class="pet">
+                <img class = "styled-image" src="https://images.unsplash.com/photo-1596818608540-4f92731b2f92?q=80&w=2946&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Cat">
+                <div class="pet-details">
+                    <h3>Cat</h3>
+                    <p>Breed: American Shorthair</p>
+                    <p>Age: 6 months</p>
+                    <p>Gender: Female</p>
+                    <p>Gets along with: other dogs, other cats, and small children </p>
+                    <p>Reason for adoption: Cuddly and litter-trained</p>
+                    <p>Owner: Alex Lalonde</p>
+                    <button class="button">Interested</button>
+                </div>
+            </div>
+            
+        </div>
+
+    
+
+    </article>
+        </div>
+  
+    
+     <%- include('../views/partials/footer.ejs') %>
+
+    
+    
+    
+    <script src="script.js"></script>
+   
+</body>
+</html>

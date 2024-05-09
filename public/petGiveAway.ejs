@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Nicole's Adoption Center</title>
+        <link rel="stylesheet" href="styles.css"> 
+    </head>
+
+<body>
+
+    <%- include('../views/partials/header.ejs') %>
+    
+    
+     <div id="contentArea">   
+    
+    <aside>
+        <ul>
+            <li><a href="/home" >Home Page</a></li>
+            <li><a href="/findPet">Find a Dog/Cat</a></li>
+            <li><a href="/dogCare" >Dog Care</a></li>
+            <li><a href="/catCare" >Cat Care</a></li>
+            <li><a href="/login">Have a Pet to Give Away</a></li>
+            <li><a href="/account">Create an Account</a></li>
+            <li><a href="/contact">Contact Us</a></li>
+            <li>
+                <form id="logoutForm" action="/logOut" method="POST">
+                    <br>
+                    <button type="button" onclick="confirmLogout()">Log Out</button>
+                </form>
+            </li>           </ul>
+    </aside>
+    
+        
+    <article>
+      
+        <div id="petGiveAway">
+            <form action="/submitAdoption" method="POST" onsubmit="return validateAdoptionForm();">
+        
+                <fieldset>
+                    <legend>Give a Pet Up for Adoption Form</legend>
+                    <label> What animal do you want to give away? </label>
+                    <input type="radio" id="dogAway" name="dogCatAway" value="dog">
+                    <label for="dogAway">Dog</label>
+                    <input type="radio" id="catAway" name="dogCatAway" value="cat">
+                    <label for="catAway">Cat</label><br><br>
+                    <label for="breedAway"> Enter the breed of your pet: </label>
+                    <input type="text" id="breedAway" name="breedAway"><br><br>
+                    <label for="ageAway"> What is the age of your pet? </label>
+                    <select name="ageAway" id="ageAway">
+                        <option>--------------------------------------</option>
+                        <option> 6 months old or less </option>
+                        <option> Between 6 months and 2 years old </option>
+                        <option> Between 2 and 6 years old </option>
+                        <option> 6 years old or older</option>
+                    </select><br><br>
+                    <label> What is the gender? </label>
+                    <input type="radio" id="femaleAway" name="genderAway" value="female">
+                    <label for="femaleAway">Female</label>
+                    <input type="radio" id="maleAway" name="genderAway" value="male">
+                    <label for="maleAway">Male</label>
+                    <br><br>
+                    <label> Select if your pet gets along with any of the following: </label>
+                    <input type="checkbox" id="otherDogsAway" name="getAlongWith" value="otherDogs">
+                        <label for="otherDogsAway"> Other Dogs</label>
+                    <input type="checkbox" id="otherCatsAway" name="getAlongWith" value="otherCats">
+                        <label for="otherCatsAway"> Other Cats</label>
+                    <input type="checkbox" id="smallChildrenAway" name="getAlongWith" value="smallChildren">
+                        <label for="smallChildrenAway"> Small Children </label><br><br>
+                    <label for="brag"> Please tell us why your pet would be great for adopting:</label><br>
+                    <textarea id="brag" name="brag" rows="5" cols="100"></textarea><br>
+                    <label for="fname">Owner's first name:</label><br>
+                    <input type="text" id="fname" name="fname"><br><br>
+                    <label for="lname">Owner's last name:</label><br>
+                    <input type="text" id="lname" name="lname"><br><br>
+                    <label for="ownerEmail">Owner's email: </label><br>
+                    <input type="email" id="ownerEmail" name="ownerEmail"><br><br>
+                    
+                    <input type="submit" value="Submit">
+                    <input type="reset" value="Clear">
+                </fieldset>
+            </form>
+        </div>
+         
+
+    </article>
+        </div>
+  
+    
+    <%- include('../views/partials/footer.ejs') %>
+    
+    
+    
+    <script src="script.js"></script>
+   
+</body>
+</html>

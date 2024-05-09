@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Nicole's Adoption Center</title>
+        <link rel="stylesheet" href="styles.css"> 
+    </head>
+
+<body>
+    <%- include('../views/partials/header.ejs') %>
+    
+    
+     <div id="contentArea">   
+    
+    <aside>
+        <ul>
+            <li><a href="/home" >Home Page</a></li>
+            <li><a href="/findPet">Find a Dog/Cat</a></li>
+            <li><a href="/dogCare" >Dog Care</a></li>
+            <li><a href="/catCare" >Cat Care</a></li>
+            <li><a href="/login">Have a Pet to Give Away</a></li>
+            <li><a href="/account">Create an Account</a></li>
+            <li><a href="/contact">Contact Us</a></li>
+            <li>
+                <form id="logoutForm" action="/logOut" method="POST">
+                    <br>
+                    <button type="button" onclick="confirmLogout()">Log Out</button>
+                </form>
+            </li>           </ul>
+    </aside>
+    
+        
+    
+      <article>
+
+        <div id = #home>
+            <h2>Welcome to Nicole's Adoption Center!</h2>
+            <p>At Nicole's Adoption Center, we're dedicated to helping you find the perfect furry companion for your family.</p>
+            <p>Whether you're looking to adopt a playful kitten or a loyal canine companion, our mission is to match loving pets with loving homes.</p>
+            <p>Explore our website to learn more about the adoption process, browse available pets, and discover valuable resources for pet care.</p>
+         </div> 
+
+        </article>
+
+        </div>
+  
+    
+        <%- include('../views/partials/footer.ejs') %>
+
+    
+    
+    
+    <script src="script.js"></script>
+   
+</body>
+</html>

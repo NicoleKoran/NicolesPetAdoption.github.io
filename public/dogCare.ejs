@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Nicole's Adoption Center</title>
+        <link rel="stylesheet" href="styles.css"> 
+    </head>
+
+<body>
+    <%- include('../views/partials/header.ejs') %>
+    
+    
+     <div id="contentArea">   
+    
+    <aside>
+        <ul>
+            <li><a href="/home" >Home Page</a></li>
+            <li><a href="/findPet">Find a Dog/Cat</a></li>
+            <li><a href="/dogCare" >Dog Care</a></li>
+            <li><a href="/catCare" >Cat Care</a></li>
+            <li><a href="/login">Have a Pet to Give Away</a></li>
+            <li><a href="/account">Create an Account</a></li>
+            <li><a href="/contact">Contact Us</a></li>
+            <li>
+                <form id="logoutForm" action="/logOut" method="POST">
+                    <br>
+                    <button type="button" onclick="confirmLogout()">Log Out</button>
+                </form>
+            </li>           </ul>
+    </aside>
+    
+        
+    <article>
+      
+        <div id="dogCare">
+            <h2>Optimizing Your Canine Companion’s Well-being</h2>
+        <p>Introducing a furry friend into your household can be an enriching experience, but whether you're a seasoned pet owner or embarking on this journey for the first time, prioritizing your dog's health and happiness is paramount. Below, you'll find a comprehensive guide to ensure your canine companion thrives in every aspect of their life.</p>
+        <h2>Nutrition Matters</h2>
+        <p>Proper nutrition lays the foundation for your dog's well-being at every stage of life:</p>
+        <ul>
+            <li>Puppies aged eight to 12 weeks require four meals daily.</li>
+            <li>Three meals suffice for puppies aged three to six months.</li>
+            <li>For puppies between six months to one year, two meals are optimal.</li>
+            <li>Once your dog reaches their first birthday, one meal per day is typically adequate.</li>
+        </ul>
+        <p>For some breeds, especially larger ones prone to bloating, splitting their meals into smaller portions is advisable. Quality dry food, supplemented with occasional treats like cottage cheese or cooked eggs, provides a well-balanced diet. However, these extras should not exceed ten percent of their daily intake.</p>
+        <h2>Exercise for Vitality</h2>
+        <p>Regular exercise is vital for your dog's physical and mental health, although requirements vary depending on breed, age, and health status. Engage in supervised activities that cater to their natural instincts, such as fetching, herding, or simply going for a walk, to stave off boredom and prevent destructive behaviors.</p>
+        <h2>Grooming Essentials</h2>
+        <p>Maintain your dog's hygiene and minimize shedding by incorporating regular grooming sessions. Check for fleas and ticks daily, especially during warmer months. While baths should be infrequent, thorough rinsing is essential to prevent soap residue buildup.</p>
+        <h2>Safe Handling Practices</h2>
+        <p>When lifting your pup, support their chest with one hand and their hind legs with your forearm or another hand. Avoid grasping them by their forelegs, tail, or neck. For larger dogs, lift from underneath, supporting their chest and rear end simultaneously.</p>
+        <h2>Comfortable Living Environment</h2>
+        <p>Ensure your dog has a cozy, draft-free space to rest, whether it's a designated crate or a plush dog bed. Wash their bedding regularly and provide adequate shelter and water access for outdoor activities, adjusting according to weather conditions.</p>
+        <h2>Identification and Safety Measures</h2>
+        <p>Comply with local licensing regulations and attach the license to your dog's collar, along with an ID tag. Consider additional measures like microchipping for added security in case your dog gets lost.</p>
+        <h2>Healthcare Essentials</h2>
+        <p>Prioritize your dog's health with regular check-ups, vaccinations, and preventive measures against pests like fleas and ticks. Consult your veterinarian for personalized advice and explore modern treatment options.</p>
+        <h2>Responsible Waste Management</h2>
+        <p>Keep your dog leashed in public areas and promptly clean up after them to maintain cleanliness and respect for public spaces.</p>
+        <p>By implementing these guidelines, you can ensure a fulfilling and healthy life for your cherished canine companion.</p>
+            
+            <br>
+         <p>Source: <a href="https://www.aspca.org/pet-care/dog-care/general-dog-care" target="_blank">www.aspca.org/pet-care/dog-care/general-dog-care</a></p>
+            <p style="font-size: 12px;">(Content sourced from ASPCA)</p>
+
+        </div>
+
+    </article>
+        </div>
+  
+
+  <%- include('../views/partials/footer.ejs') %>
+
+    
+    
+    
+    <script src="script.js"></script>
+   
+</body>
+</html>

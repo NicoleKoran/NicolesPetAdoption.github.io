@@ -1,0 +1,5 @@
+1:Nicole:Koran:undefined:shitzu:6 years old or older:on:on:cute:nicolekoran4@gmail.com
+2:Nicole:Koran:undefined:shitzu:6 years old or older:female:otherDogs,smallChildren:cute:nicolekoran4@gmail.com
+3:Nicole:Koran:dog:shitzu:6 years old or older:female:otherDogs,smallChildren:very friendly:nicolekoran4@gmail.com
+4:Nicole:Koran:cat:shorthair:Between 6 months and 2 years old:male:otherCats:cuddly:nicolekoran4@gmail.com
+5:bob:smith:dog:shitzu:6 months old or less:male:undefined:very nice:bobsmith@gmail.com
