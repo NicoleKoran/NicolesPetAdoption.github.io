@@ -1,3 +1,8 @@
+Put in the browser: NicolesPetAdoptionWebsite.git
+
+
+
+
 To open your website from the command line:
 
 1. Navigate to your project directory using the cd command:
