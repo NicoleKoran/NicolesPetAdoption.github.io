@@ -1,4 +1,4 @@
-Put in the browser: NicolesPetAdoptionWebsite.git
+Put in the browser: NicolesPetAdoptionWebsite.github.io
 
 
 
